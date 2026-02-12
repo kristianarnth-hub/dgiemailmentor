@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+</head>
+<body>
+<h2>Indtast password for at se appen</h2>
+<input type="password" id="password" placeholder="Password" />
+<button onclick="checkPassword()">Login</button>
+
+<script>
+function checkPassword() {
+  const password = document.getElementById("password").value;
+  const correctPassword = "dgikoordinator4life";
+
+  if(password === correctPassword) {
+    // Gå videre til appen
+    window.location.href = "/dgiemailmentor";
+  } else {
+    alert("Forkert password!");
+  }
+}
+</script>
+</body>
+</html>
