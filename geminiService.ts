@@ -2,7 +2,7 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { EmailInput, ChatMessage } from "./types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || "" });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY || "" });
 
 const SYSTEM_INSTRUCTION = `
 Du er en strategisk kommunikationsmentor og email-marketing ekspert for DGI. Din opgave er at guide koordinatorer til at sende professionelle, lovlige og effektive mails.
